@@ -1,0 +1,40 @@
+<!--
+  Generated template for the BenefittedFarmersPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="farmGreen">
+    <ion-title>Benefitted Farmers</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div id="content">
+    <p>We are glad to inform you the below farmer's, debt has been cleared</p>
+  </div>
+  <div id="thanksNote">!!Thank You!!</div>
+  <ion-list>
+    <table>
+      <ion-item *ngFor="let detail of benefittedFarmers; let i = index">
+        <tr>
+          <td item-width="20%">
+            <ion-avatar item-start>
+              <img src="assets/farmer.jpg">
+            </ion-avatar>
+          </td>
+          <td>
+            <div id="name">{{detail.name}}</div>
+
+            <div id="detail3">Rs.{{detail.loanAmount}} has been cleared</div>
+          </td>
+
+        </tr>
+      </ion-item>
+    </table>
+  </ion-list>
+
+</ion-content>

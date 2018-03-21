@@ -1,0 +1,34 @@
+page-my-transactions {
+    table {
+        border: 1px solid black;
+        width: 100%;
+        
+    }
+    td{
+        text-align: left;
+        height: 50px;
+    }
+    th {
+        text-align: left;
+        padding: 8px;
+    }
+    tr:nth-child(odd){background-color: #f2f2f2}
+    tr:nth-child(even){
+        text-align: left;
+        background-color: #f2f2f2}
+    
+    th {
+        background-color: #076307;
+        //background-color: #4CAF50;
+        color: white;
+    }
+    #transactions{
+        font-size: 18px;
+        text-align: center;
+        margin-top: 50%;
+        color: red;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    }
+    

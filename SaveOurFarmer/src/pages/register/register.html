@@ -1,0 +1,59 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="farmGreen">
+    <ion-title>Register Me</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>User Name*</ion-label>
+    <ion-input type="text" [(ngModel)]="name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Email Address*</ion-label>
+    <ion-input type="email" [(ngModel)]="email"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Password*</ion-label>
+    <ion-input type="password" [(ngModel)]="password"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Verify Password*</ion-label>
+    <ion-input type="password" [(ngModel)]="cpassword"></ion-input>
+  </ion-item>
+  <!--
+      <table>
+        <tr>
+          <td>
+            <div  id="pic">Upload your photo</div>
+          </td>
+          <td>
+            <button id="camera"  (click)="takePicture()"><ion-icon name="camera"></ion-icon></button>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            {{imgSuccessMsg}}
+          </td>
+        </tr>
+      </table>-->
+  <div id="register">
+    <button id="registerForm" ion-button icon-left type="submit" (click)="registerMe()" block color="farmGreen">
+      Add Me
+    </button>
+  </div>
+  <!--
+      <div id="errorMsg">{{errorMsg}}</div>
+      <div id="successMsg">{{successMsg}}</div>
+      <div id="errorMsg">{{nameErrorMsg}}</div>
+      <div id="errorMsg">{{passwordMismatchMessage}}</div>-->
+</ion-content>

@@ -1,0 +1,45 @@
+page-individual-farmer-details {
+
+    h5{
+        font-weight: bolder;
+    }
+    ion-title{
+        align-content: left;
+        text-align: left;
+    }
+    ion-card-header{
+        color: black;
+    }
+    ion-label{
+        color: black;
+        font-weight: bolder;
+        text-align: center;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+    ion-card-content{
+        color: black;
+    }
+    #errorMsg{
+        font-size: 12px;
+        text-align: center;
+        align-content: center;
+        //padding-left: 10px;
+        //margin-left: 15px;
+        color: red;
+    }
+    #pay{
+        margin-top: 20px;
+        background-color: #076307;
+    }
+    #more{
+        //margin-left: 0px;
+        //font-weight: bolder;
+        font-size: 30px;
+        background-color: #076307;
+        float: right;
+        margin-top: -2px;
+        color: whitesmoke;
+    }
+    }
+    

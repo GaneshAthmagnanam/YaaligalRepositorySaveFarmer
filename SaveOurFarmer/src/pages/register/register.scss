@@ -1,0 +1,51 @@
+page-register {
+    ion-title{
+        align-content: left;
+        text-align: left;
+        }
+    #registerForm{
+        align-content: center;
+        text-align: center;
+        //margin-left:60px;
+        margin-top: 20px;
+    }    
+    #register{
+        align-content: center;
+        text-align: center;
+    }
+    ion-input{
+        color: #488aff;
+    }
+    #pic{
+        margin-top: 20px;
+        margin-left: 15px;
+        
+        font-weight: bolder;
+        font-size: 20px;
+    }
+    #camera{
+        font-size: 20px;
+        margin-top: 20px;
+        margin-left: 15px;
+        float: right;
+    }
+    #errorMsg{
+        margin-top: 15px;
+        font-size: 12px;
+        text-align: center;
+        align-content: center;
+        //padding-left: 10px;
+        //margin-left: 15px;
+        color: red;
+    }
+    #successMsg{
+        margin-top: 15px;
+        font-size: 14px;
+        text-align: center;
+        align-content: center;
+        //padding-left: 10px;
+        //margin-left: 15px;
+        color: darkgreen;
+    }
+    }
+    

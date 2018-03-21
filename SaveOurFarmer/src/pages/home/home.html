@@ -1,0 +1,116 @@
+<ion-menu [content]="content" type="overlay">
+  <ion-header>
+    <ion-toolbar color="farmGreen">
+      <ion-title>
+        <img *ngIf="authMethod=='3'" id="image" src={{loggedUserImage}} />
+        <img *ngIf="authMethod=='2'" id="image" src={{loggedUserImage}} />
+        <div id="iconItem" *ngIf="authMethod=='1'">
+          <ion-icon name="person"></ion-icon>
+        </div>
+        <!-- <img *ngIf="authMethod=='1'" id="image" src={{loggedUserImage}} />-->
+        <div id="uname">
+          {{loggedUserName}}
+
+        </div>
+        <div id="uemail">
+          {{mailIdentifier}}
+        </div>
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        <span *ngIf="p.title=='Logout'">
+          <ion-icon id="more" name="log-out"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+        <span *ngIf="p.title=='Home'">
+          <ion-icon id="more" name="home"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+        <span *ngIf="p.title=='My Profile'">
+          <ion-icon id="more" name="person"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+        <span *ngIf="p.title=='Contribute to Farmers Account'">
+          <ion-icon id="more" name="hand"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+
+        <span *ngIf="p.title=='Farmers Details'">
+          <ion-icon id="more" name="people"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+        <span *ngIf="p.title=='My Transactions'">
+          <ion-icon id="more" name="information-circle"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+        <span *ngIf="p.title=='Benefited Farmers'">
+          <ion-icon id="more" name="thumbs-up"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+        <span *ngIf="p.title=='Contributors List'">
+          <ion-icon id="more" name="globe"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+        <span *ngIf="p.title=='Contact Us'">
+          <ion-icon id="more" name="contacts"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+        <span *ngIf="p.title=='Rate SaveFarmer'">
+          <ion-icon id="more" name="star"></ion-icon>
+          <span id="menuValues">{{p.title}}</span>
+        </span>
+
+      </button>
+    </ion-list>
+  </ion-content>
+
+</ion-menu>
+
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+<ion-header>
+  <ion-navbar color="farmGreen">
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>
+      <div id="title">Home..</div>
+      <ion-icon id="sort" name="funnel"></ion-icon>
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+<ion-content padding>
+  <div id="refresh">pull to refresh
+  </div>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  <ion-searchbar [(ngModel)]="searchQuery" (ionInput)="setFilteredItems()" placeholder="Search farmer name" animated=true autocomplete="on"></ion-searchbar>
+  <ion-list *ngFor="let detail of farmerDetails; let i = index">
+    <table *ngIf="detail.amount_pending > 0">
+
+      <ion-item>
+        <tr>
+          <td (click)="farmerDetailsIndividual(detail.id)" item-width="20%">
+            <ion-avatar item-start>
+              <img src="assets/farmer.jpg">
+            </ion-avatar>
+          </td>
+          <td (click)="farmerDetailsIndividual(detail.id)">
+            <div id="name">{{detail.name}}</div>
+
+            <div id="detail3">Loan pending: Rs.{{detail.amount_pending}}</div>
+          </td>
+          <td id="tdata" item-width="10%">
+            <button id="contributors" ion-button icon-end block type="submit" (click)="showContributors(detail.id)">
+              {{detail.contributors_count}}
+            </button>
+          </td>
+        </tr>
+      </ion-item>
+    </table>
+  </ion-list>
+</ion-content>

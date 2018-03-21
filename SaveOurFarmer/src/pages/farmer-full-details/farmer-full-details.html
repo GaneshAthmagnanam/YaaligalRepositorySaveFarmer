@@ -1,0 +1,31 @@
+<!--
+  Generated template for the FarmerFullDetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="farmGreen">
+    <ion-title>FarmerFullDetails</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card *ngFor="let detail of pendingFarmerDetails; let i = index">
+    <img src="assets/farmer.jpg" />
+    <ion-card-content>
+      <ion-card-title>
+        <h1>{{detail.name}} </h1>
+        <h3>Age: {{detail.age}}</h3>
+      </ion-card-title>
+      <p>
+        Having 5 members in his family, suffering to pay loan amount of Rupees: {{detail.amount_pending}}
+
+      </p>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

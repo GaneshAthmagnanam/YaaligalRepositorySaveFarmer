@@ -1,0 +1,30 @@
+<!--
+  Generated template for the OverallContributorsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar color="farmGreen">
+    <!--<ion-icon name="arrow-round-back" (click)="dismiss()"></ion-icon>-->
+    <ion-title>Overall Contributors</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list *ngFor="let detail of contributorsDetails;  let i = index">
+    <ion-item *ngIf="detail[1]!=':'">
+      <ion-avatar item-start *ngIf="detail[1]!=':'">
+        <img src="{{detail[2]}}">
+      </ion-avatar>
+      <div id="name" *ngIf="detail[0]!=':'">
+        {{detail[0]}}</div>
+      <div id="emailId" *ngIf="detail[1]!=':'">
+        {{detail[1]}}
+      </div>
+    </ion-item>
+  </ion-list>
+</ion-content>
