@@ -54,7 +54,10 @@ export class IndividualFarmerDetailsPage implements OnInit {
     }
     this.saveData.saveTransaction(this.loggedInEmail,
       this.loggedInName, this.uamount, this.farmerId, this.loggedInImage).subscribe(res => {
-        if (res.text() == "Transaction Completed, Updation Done Successfully") {
+        //console.log("!!!1"+res.text());
+        //console.log("!!!2"+res.status);
+        //console.log("!!!3"+res.statusText);
+        if (res.status == 200) {
           this.navCtrl.setRoot(HomePage, {
             method: this.methodValue, mailId: this.loggedInEmail,
             name: this.loggedInName, data: this.socialData

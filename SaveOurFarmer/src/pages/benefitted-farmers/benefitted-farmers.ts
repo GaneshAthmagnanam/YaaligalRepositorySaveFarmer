@@ -21,9 +21,9 @@ export class BenefittedFarmersPage implements OnInit {
 
   ngOnInit() {
     this.service.fetchFarmerDetails().subscribe(res => {
-      this.allFarmerDetails = res['farmerDetails'];
+      this.allFarmerDetails = res['farmer_details'];
       for (var i = 0; i < this.allFarmerDetails.length; i++) {
-        if (this.allFarmerDetails[i].amountPending == 0) {
+        if (this.allFarmerDetails[i].amount_pending == 0) {
           this.benefittedFarmers.push(this.allFarmerDetails[i]);
         }
       }

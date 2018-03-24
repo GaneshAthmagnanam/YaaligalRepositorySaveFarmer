@@ -41,7 +41,7 @@ export class FetchServiceProvider {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     //let data = JSON.stringify(postParameters);
-    let urlSaveTransaction = "http://localhost:8008/ourfarmers";
+    let urlSaveTransaction = "http://www.yaaligal.org/saveFarmerAPIs/ourfarmers";
     return this.http.post(urlSaveTransaction, postParameters, options);
 
   }
