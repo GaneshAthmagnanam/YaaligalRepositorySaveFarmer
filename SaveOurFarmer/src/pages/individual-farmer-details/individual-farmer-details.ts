@@ -39,12 +39,12 @@ export class IndividualFarmerDetailsPage implements OnInit {
 
   }
   ngOnInit() {
-    let url: any = "http://localhost:8008/ourfarmers/" + this.farmerId;
+    let url: any = "http://www.yaaligal.org/saveFarmerAPIs/ourfarmers/" + this.farmerId;
     this.http.get(url).map(response => {
       return response.json();
     }
     ).subscribe(res => {
-      this.individualFarmer = res['farmerindividualdetails'];
+      this.individualFarmer = res['farmer_details'];
     })
 
   }

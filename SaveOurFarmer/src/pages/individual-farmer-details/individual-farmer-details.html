@@ -24,15 +24,15 @@
       <ion-card-content>
         <h2 style="font-weight:bold;">Details:</h2>
         <ul style="font-weight:bold;list-style-type:none;margin-top:5px;">
-          <li>Due Pending for past {{individualFarmerDetails.monthsDue}} months</li>
-          <li>Amount to be paid Rs.{{individualFarmerDetails.amountPending}}</li>
+          <li>Due Pending for past {{individualFarmerDetails.months_due}} months</li>
+          <li>Amount to be paid Rs.{{individualFarmerDetails.amount_pending}}</li>
           <li>Reason: {{individualFarmerDetails.reason}}</li>
         </ul>
         <br/> Regards
         <br/> Save Farmer Team
       </ion-card-content>
     </ion-card>
-    <ion-label>Pending Loan Amount is Rs.{{individualFarmerDetails.amountPending}}</ion-label>
+    <ion-label>Pending Loan Amount is Rs.{{individualFarmerDetails.amount_pending}}</ion-label>
     <ion-item id="amountvalue">
       <ion-label floating color="black">Enter Amount to contribute</ion-label>
       <ion-input type="number" [(ngModel)]="uamount"></ion-input>

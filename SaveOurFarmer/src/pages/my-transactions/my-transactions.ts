@@ -27,11 +27,11 @@ export class MyTransactionsPage implements OnInit {
   ngOnInit() {
 
     this.fetchContributors.fetchOverallContributors().subscribe(response => {
-      this.overallContributorsArray = response['specific contibutors'];
+      this.overallContributorsArray = response['specific_contributors'];
       for (var i = 0; i < this.overallContributorsArray.length; i++) {
 
-        if (this.overallContributorsArray[i].emailId == this.userEmailId) {
-          this.myTransactionArray.push([this.overallContributorsArray[i].transactionId, this.overallContributorsArray[i].amountPaid, this.overallContributorsArray[i].farmerId]);
+        if (this.overallContributorsArray[i].email_id == this.userEmailId) {
+          this.myTransactionArray.push([this.overallContributorsArray[i].transaction_id, this.overallContributorsArray[i].amount_paid, this.overallContributorsArray[i].farmer_id]);
         }
 
       }
