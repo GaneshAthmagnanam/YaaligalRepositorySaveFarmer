@@ -31,7 +31,7 @@ export class IndividualFarmerDetailsPage implements OnInit {
     this.loggedInName = this.navParams.get('name');
     this.loggedInImage = this.navParams.get('image');
     this.loggedInEmail = this.navParams.get('email');
-    this.socialData = this, navParams.get('socialMediaData');
+    this.socialData = this.navParams.get('socialMediaData');
     this.methodValue = this.navParams.get('method');
   }
 
